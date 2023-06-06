@@ -23,7 +23,7 @@ const App = () => {
 
   const fetchPlayersData = async () => {
     try {
-      const promises = ids.map(id => axios.get(`${url}${id}`)); // Modified the API endpoint URL
+      const promises = ids.map(id => axios.get(`/api/${id}`));
       const responses = await Promise.all(promises);
       const playersData = responses.map(response => {
         const $ = cheerio.load(response.data);
