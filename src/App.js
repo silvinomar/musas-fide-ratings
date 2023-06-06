@@ -23,7 +23,8 @@ const App = () => {
 
   const fetchPlayersData = async () => {
     try {
-      const promises = ids.map(id => axios.get(`/api/${id}`));
+      const corsProxyUrl = 'https://cors-anywhere.herokuapp.com/';
+      const promises = ids.map(id => axios.get(`${corsProxyUrl}https://ratings.fide.com/profile/${id}`));
       const responses = await Promise.all(promises);
       const playersData = responses.map(response => {
         const $ = cheerio.load(response.data);
