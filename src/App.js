@@ -73,17 +73,18 @@ const App = () => {
 
     if (sortColumn !== column) {
 
-    setPlayersData(prevPlayersData => [...prevPlayersData].sort((a, b) => {
-      if (a[column] === "Not rated") {
-        return 1;
-      } else if (b[column] === "Not rated") {
-        return -1;
-      } else {
-        return b[column] - a[column];
-      }
-      setSortColumn(column);
-    
-    }));}
+      setPlayersData(prevPlayersData => [...prevPlayersData].sort((a, b) => {
+        if (a[column] === "Not rated") {
+          return 1;
+        } else if (b[column] === "Not rated") {
+          return -1;
+        } else {
+          return b[column] - a[column];
+        }
+        setSortColumn(column);
+
+      }));
+    }
   };
 
   const sorting = (column) => {
