@@ -2,7 +2,6 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://ratings.fide.com/",
   "homepage": "https://silvinomar.github.io/musas-fide-ratings",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

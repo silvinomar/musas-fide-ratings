@@ -3,7 +3,7 @@ import axios from 'axios';
 import cheerio from 'cheerio';
 import PlayerRow from './PlayerRow';
 
-const url = "profile/";
+const url = "/profile/"; // Modified the URL to include the relative path
 const ids = [
   1976508, 14173328, 1910116, 1928660, 1947745, 1971891, 34173153, 1915312, 1939823, 1969145, 1924893, 1970720, 1976494, 1969323, 1967495, 1914995, 1980599, 1980378, 1972332, 16267214, 1970399, 1912704, 1922610, 1922629, 1926888, 1929801, 1937839, 1954539, 1964585, 1965263, 1976613, 1976648, 1976656, 1976672, 1976680, 1976699, 1979833
 ];
@@ -23,7 +23,7 @@ const App = () => {
 
   const fetchPlayersData = async () => {
     try {
-      const promises = ids.map(id => axios.get("profile/" + id));
+      const promises = ids.map(id => axios.get(`${url}${id}`)); // Modified the API endpoint URL
       const responses = await Promise.all(promises);
       const playersData = responses.map(response => {
         const $ = cheerio.load(response.data);
