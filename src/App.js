@@ -3,9 +3,9 @@ import axios from 'axios';
 import cheerio from 'cheerio';
 import PlayerRow from './PlayerRow';
 
-const url = "https://ratings.fide.com/profile/";
+const url = "profile/";
 const ids = [
-  1976508, 14173328, 1928660, 1971891, 1970720, 1967495, 1972332, 1914995, 1910116, 1926888, 1976680, 1964585, 1924893, 16267214, 1915312, 1939823, 1912704, 1922610, 1922629, 1965263, 1976656, 1969323, 1976494, 1969145, 1970399, 1976613, 1976672, 1937839, 1976648, 34173153, 1929801, 1976699, 1954539
+  1976508, 14173328, 1910116, 1928660, 1947745, 1971891, 34173153, 1915312, 1939823, 1969145, 1924893, 1970720, 1976494, 1969323, 1967495, 1914995, 1980599, 1980378, 1972332, 16267214, 1970399, 1912704, 1922610, 1922629, 1926888, 1929801, 1937839, 1954539, 1964585, 1965263, 1976613, 1976648, 1976656, 1976672, 1976680, 1976699, 1979833
 ];
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
 
   const fetchPlayersData = async () => {
     try {
-      const promises = ids.map(id => axios.get(url + id));
+      const promises = ids.map(id => axios.get("profile/" + id));
       const responses = await Promise.all(promises);
       const playersData = responses.map(response => {
         const $ = cheerio.load(response.data);
