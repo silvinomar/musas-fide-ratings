@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1{
+  font-weight: 300;
+  font-size:2rem;
+}
+
+table a{
+  color: #042b54;
+}
+
+th.active{
+  text-decoration: underline;
+}
