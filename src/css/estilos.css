@@ -1,26 +1,54 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #F8F7F4;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  h1{
+    font-weight: 300;
+    font-size:2rem;
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  thead{
+    background-color: #F8F7F4;
+  }
 
-h1{
-  font-weight: 300;
-  font-size:2rem;
-}
+  table{
+    max-width: 720px;
+    border-collapse: unset;
+  }
+  
+  table a{
+    text-decoration-skip-ink: none;
+    text-decoration: none;
+  }
 
-table a{
-  color: #042b54;
-}
+  table a:hover{
+    color: #333;
+  }
 
-th.active{
-  text-decoration: underline;
-}
+  th ~ th{
+    cursor: pointer;
+  }
+  
+  th.active{
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 0.25rem;
+    background-color:green
+  }
+
+  th ~ th, td ~ td {
+    text-align: center;
+  }
