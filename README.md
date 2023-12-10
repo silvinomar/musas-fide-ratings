@@ -10,31 +10,25 @@ Before you begin, ensure you have [Node.js](https://nodejs.org/) and [npm](https
 
    ```bash
    git clone https://github.com/your-username/your-repo.git
-Navigate to the project directory:
 
-bash
-Copy code
-cd your-repo
-Install dependencies:
+2. Navigate to the project directory:
+  
+   ```bash
+    cd your-repo
 
-bash
-Copy code
-npm install
-Running the App
+3. Install dependencies:
+
+    ```bash
+    npm install
+
+### Running the app
 Run the app in development mode:
 
-bash
-Copy code
-npm start
+    ```bash
+    npm start
+    
+
 Open http://localhost:3000 in your browser to view the app.
 
-Build
-To build the app for production:
-
-bash
-Copy code
-npm run build
-The build artifacts will be stored in the build/ directory.
-
-Additional Information
+### Additional Information
 For more details on available scripts and project structure, refer to the Create React App documentation.
