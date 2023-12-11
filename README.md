@@ -28,7 +28,7 @@ Run the app in development mode:
 
    ```bash
     npm start
-    
+   ```
 
 Open http://localhost:3000 in your browser to view the app.
 
