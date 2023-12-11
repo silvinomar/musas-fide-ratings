@@ -3,8 +3,19 @@ import { fetchPlayerInfo } from '../api';
 import PlayerRow from './PlayerRow';
 import playerIds from '../playerIds';
 
+const calculateVariation = (current, previous) => {
+    const variation = parseInt(current, 10) - parseInt(previous, 10);
+    return variation !== 0 && !isNaN(variation) ? variation : "";
+};
+
+const replaceNotRated = (elo) => (elo === "Notrated" ? "-" : elo);
+
+const hasNonDashElo = (player) => (
+    player.standard_elo !== '-' || player.rapid_elo !== '-' || player.blitz_elo !== '-'
+);
+
 const App = () => {
-    const [playersData, setPlayersData] = useState([]);
+    const [playersData, setPlayersData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [sortColumn, setSortColumn] = useState("standard_elo");
 
@@ -14,54 +25,37 @@ const App = () => {
 
     const fetchPlayersData = async () => {
         try {
-            const promises = playerIds.map(id => fetchPlayerInfo(id, true));
+            // Check if data is already in localStorage
+            const cachedData = localStorage.getItem('playersData');
+            if (cachedData) {
+                setPlayersData(JSON.parse(cachedData));
+                setIsLoading(false);
+                return;
+            }
+
+            const promises = playerIds.map((id) => fetchPlayerInfo(id, true));
             const playersData = await Promise.allSettled(promises);
-            console.log('playersData:', playersData);
-            const successfulPlayers = playersData
-                .filter(result => result.value && result.value.name && (result.value.standard_elo !== "Notrated" || result.value.rapid_elo !== "Notrated" || result.value.blitz_elo !== "Notrated"))
-                .map((result, index) => {
-                    console.log(index + " " +playerIds[index] + " " + result.value.name);
+
+            const successfulPlayers = playerIds.map((playerId, index) => {
+                const result = playersData[index];
+                if (result.status === 'fulfilled' && result.value.name) {
+                    const { standard_elo = "Notrated", rapid_elo = "Notrated", blitz_elo = "Notrated" } = result.value;
+
                     const player = {
                         ...result.value,
-                        id: playerIds[index],
-                        standard_elo: result.value.standard_elo === "Notrated" ? "-" : result.value.standard_elo,
-                        rapid_elo: result.value.rapid_elo === "Notrated" ? "-" : result.value.rapid_elo,
-                        blitz_elo: result.value.blitz_elo === "Notrated" ? "-" : result.value.blitz_elo,
-                        standard_variation: "",
-                        rapid_variation: "",
-                        blitz_variation: ""
+                        id: playerId,
+                        standard_elo: replaceNotRated(standard_elo),
+                        rapid_elo: replaceNotRated(rapid_elo),
+                        blitz_elo: replaceNotRated(blitz_elo),
+                        standard_variation: calculateVariation(result.value.history[0].standard, result.value.history[1].standard),
+                        rapid_variation: calculateVariation(result.value.history[0].rapid, result.value.history[1].rapid),
+                        blitz_variation: calculateVariation(result.value.history[0].blitz, result.value.history[1].blitz),
                     };
 
-                   
-                    // Calculate variations in rating
-                    if (result.value.history.length >= 2) {
-                        let c = parseInt(result.value.history[0].standard, 10) - parseInt(result.value.history[1].standard, 10);
-                        let r = parseInt(result.value.history[0].rapid, 10) - parseInt(result.value.history[1].rapid, 10);
-                        let b = parseInt(result.value.history[0].blitz, 10) - parseInt(result.value.history[1].blitz, 10);
-    
-                        if (c !== 0 && !isNaN(c)){
-                            player.standard_variation = c;
-                            if (player.standard_variation > 0){
-                                player.standard_variation = "+" + player.standard_variation;
-                            }
-                        }
-                        if (r !== 0 && !isNaN(r)){
-                            player.rapid_variation = r;
-                            if (player.rapid_variation > 0){
-                                player.rapid_variation = "+" + player.rapid_variation;
-                            }   
-                        }
-                        if (b !== 0 && !isNaN(b)){
-                            player.blitz_variation = b;
-                            if (player.blitz_variation > 0){
-                                player.blitz_variation = "+" + player.blitz_variation;
-                            }   
-                        }
-                    }
-
                     return player;
-
-                });
+                }
+                return null;
+            }).filter(player => player !== null && hasNonDashElo(player));
 
             const failedPlayers = playersData
                 .filter(result => result.status === 'rejected')
@@ -77,7 +71,9 @@ const App = () => {
                 const valueB = b[sortColumn] === "-" ? 0 : parseInt(b[sortColumn], 10);
                 return valueB - valueA;
             });
-            console.log('Player IDs in successfulPlayers:', successfulPlayers.map(player => player.id));
+
+            // Store data in localStorage for future use
+            localStorage.setItem('playersData', JSON.stringify(successfulPlayers));
 
             setPlayersData(successfulPlayers);
             setIsLoading(false);
@@ -103,7 +99,7 @@ const App = () => {
     };
 
     if (isLoading) {
-        return <div>Loading...</div>;
+        return <div className='loading'>loading...<span className='animation'></span></div>;
     }
 
     return (
