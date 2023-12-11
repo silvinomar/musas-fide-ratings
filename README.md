@@ -26,7 +26,7 @@ Before you begin, ensure you have [Node.js](https://nodejs.org/) and [npm](https
 ### Running the app
 Run the app in development mode:
 
-    ```bash
+   ```bash
     npm start
     
 
