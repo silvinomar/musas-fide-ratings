@@ -14,18 +14,44 @@ const App = () => {
 
     const fetchPlayersData = async () => {
         try {
-            const promises = playerIds.map(id => fetchPlayerInfo(id, false));
+            const promises = playerIds.map(id => fetchPlayerInfo(id, true));
             const playersData = await Promise.allSettled(promises);
 
             const successfulPlayers = playersData
                 .filter(result => result.value && result.value.name && (result.value.standard_elo !== "Notrated" || result.value.rapid_elo !== "Notrated" || result.value.blitz_elo !== "Notrated"))
-                .map((result, index) => ({
-                    ...result.value,
-                    id: playerIds[index],
-                    standard_elo: result.value.standard_elo === "Notrated" ? "-" : result.value.standard_elo,
-                    rapid_elo: result.value.rapid_elo === "Notrated" ? "-" : result.value.rapid_elo,
-                    blitz_elo: result.value.blitz_elo === "Notrated" ? "-" : result.value.blitz_elo
-                }));
+                .map((result, index) => {
+                    const player = {
+                        ...result.value,
+                        id: playerIds[index],
+                        standard_elo: result.value.standard_elo === "Notrated" ? "-" : result.value.standard_elo,
+                        rapid_elo: result.value.rapid_elo === "Notrated" ? "-" : result.value.rapid_elo,
+                        blitz_elo: result.value.blitz_elo === "Notrated" ? "-" : result.value.blitz_elo,
+                        standard_variation: "",
+                        rapid_variation: "",
+                        blitz_variation: ""
+                    };
+
+                   
+                    // Calculate variations in rating
+                    if (result.value.history.length >= 2) {
+                        let c = parseInt(result.value.history[0].standard, 10) - parseInt(result.value.history[1].standard, 10);
+                        let r = parseInt(result.value.history[0].rapid, 10) - parseInt(result.value.history[1].rapid, 10);
+                        let b = parseInt(result.value.history[0].blitz, 10) - parseInt(result.value.history[1].blitz, 10);
+    
+                        if (c !== 0){
+                            player.standard_variation = c;
+                        }
+                        if (r !== 0){
+                            player.rapid_variation = r;
+                        }
+                        if (b !== 0){
+                            player.blitz_variation = b;
+                        }
+                    }
+
+                    return player;
+
+                });
 
             const failedPlayers = playersData
                 .filter(result => result.status === 'rejected')
@@ -89,8 +115,11 @@ const App = () => {
                             id={player.id}
                             name={player.name}
                             classical={player.standard_elo}
+                            //c_variation={player.standard_variation}
                             rapid={player.rapid_elo}
+                            //r_variation={player.rapid_variation}
                             blitz={player.blitz_elo}
+                            //b_variation={player.blitz_variation}
                         />
                     ))}
                 </tbody>
