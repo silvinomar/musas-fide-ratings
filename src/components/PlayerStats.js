@@ -14,7 +14,7 @@ const App = () => {
 
     const fetchPlayersData = async () => {
         try {
-            const promises = playerIds.map(id => fetchPlayerInfo(id, true));
+            const promises = playerIds.map(id => fetchPlayerInfo(id, false));
             const playersData = await Promise.allSettled(promises);
 
             const successfulPlayers = playersData
