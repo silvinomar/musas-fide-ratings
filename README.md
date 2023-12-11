@@ -3,12 +3,12 @@ User Interface to display FIDE ratings from [Musas](http://musas.pegada.net/) pl
 The server API is hosted on [Cyclic](https://energetic-tan-monkey.cyclic.app/). To test it you can do:
 
    ```bash
-   **/player/{fide_number}/info**
+   /player/{fide_number}/info
    https://energetic-tan-monkey.cyclic.app/player/1503014/info
 
    OR 
 
-   **/player/{fide_number}/history**
+   /player/{fide_number}/history
    https://energetic-tan-monkey.cyclic.app/player/1503014/history
    ```
 
