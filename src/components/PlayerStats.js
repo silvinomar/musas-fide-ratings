@@ -76,7 +76,7 @@ const App = () => {
             <table id="playerTable" className='table mx-auto'>
                 <thead className='sticky-top'>
                     <tr>
-                        <th>Player</th>
+                        <th></th>
                         <th onClick={() => handleSort("standard_elo")} className={sortColumn === "standard_elo" ? "active" : ""}>Classical</th>
                         <th onClick={() => handleSort("rapid_elo")} className={sortColumn === "rapid_elo" ? "active" : ""}>Rapid</th>
                         <th onClick={() => handleSort("blitz_elo")} className={sortColumn === "blitz_elo" ? "active" : ""}>Blitz</th>
