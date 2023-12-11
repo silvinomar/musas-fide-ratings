@@ -1,3 +1,17 @@
+User Interface to display FIDE ratings from [Musas](http://musas.pegada.net/) players. It's built on top of FIDE ratings scraper developed by [Rui Alves](https://github.com/silvinomar/fide-ratings-scraper).
+
+The server API is hosted on [Cyclic](https://energetic-tan-monkey.cyclic.app/). To test it you can do:
+
+    ```bash
+    /player/{fide_number}/info
+    https://energetic-tan-monkey.cyclic.app/player/1503014/info
+
+    OR 
+
+    /player/{fide_number}/history
+    https://energetic-tan-monkey.cyclic.app/player/1503014/history
+    ```
+
 This project was bootstrapped with [Create React App](https://create-react-app.dev/).
 
 ## Getting Started
