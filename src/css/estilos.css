@@ -68,3 +68,41 @@ body {
   td .false{
     color: red;
   }
+
+  footer{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 1px solid #ccc;
+    padding: 1rem 10px;
+  }
+
+  .loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .loading .animation {
+    display: block;
+    width: 20vh;
+    height: 20vh;
+    margin-left: 2rem;
+    border-radius: 100%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    animation: donut-spin linear 1.2s infinite;
+    border: 2px solid transparent;
+    border-right-color: rgba(15, 15, 255, 0.55);
+}
+
+
+@keyframes donut-spin {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
