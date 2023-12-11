@@ -14,12 +14,13 @@ const App = () => {
 
     const fetchPlayersData = async () => {
         try {
-            const promises = playerIds.map(id => fetchPlayerInfo(id, false));
+            const promises = playerIds.map(id => fetchPlayerInfo(id, true));
             const playersData = await Promise.allSettled(promises);
-
+            console.log('playersData:', playersData);
             const successfulPlayers = playersData
                 .filter(result => result.value && result.value.name && (result.value.standard_elo !== "Notrated" || result.value.rapid_elo !== "Notrated" || result.value.blitz_elo !== "Notrated"))
                 .map((result, index) => {
+                    console.log(index + " " +playerIds[index] + " " + result.value.name);
                     const player = {
                         ...result.value,
                         id: playerIds[index],
@@ -38,14 +39,23 @@ const App = () => {
                         let r = parseInt(result.value.history[0].rapid, 10) - parseInt(result.value.history[1].rapid, 10);
                         let b = parseInt(result.value.history[0].blitz, 10) - parseInt(result.value.history[1].blitz, 10);
     
-                        if (c !== 0){
+                        if (c !== 0 && !isNaN(c)){
                             player.standard_variation = c;
+                            if (player.standard_variation > 0){
+                                player.standard_variation = "+" + player.standard_variation;
+                            }
                         }
-                        if (r !== 0){
+                        if (r !== 0 && !isNaN(r)){
                             player.rapid_variation = r;
+                            if (player.rapid_variation > 0){
+                                player.rapid_variation = "+" + player.rapid_variation;
+                            }   
                         }
-                        if (b !== 0){
+                        if (b !== 0 && !isNaN(b)){
                             player.blitz_variation = b;
+                            if (player.blitz_variation > 0){
+                                player.blitz_variation = "+" + player.blitz_variation;
+                            }   
                         }
                     }
 
@@ -67,6 +77,7 @@ const App = () => {
                 const valueB = b[sortColumn] === "-" ? 0 : parseInt(b[sortColumn], 10);
                 return valueB - valueA;
             });
+            console.log('Player IDs in successfulPlayers:', successfulPlayers.map(player => player.id));
 
             setPlayersData(successfulPlayers);
             setIsLoading(false);
@@ -115,11 +126,11 @@ const App = () => {
                             id={player.id}
                             name={player.name}
                             classical={player.standard_elo}
-                            //c_variation={player.standard_variation}
+                            c_variation={player.standard_variation}
                             rapid={player.rapid_elo}
-                            //r_variation={player.rapid_variation}
+                            r_variation={player.rapid_variation}
                             blitz={player.blitz_elo}
-                            //b_variation={player.blitz_variation}
+                            b_variation={player.blitz_variation}
                         />
                     ))}
                 </tbody>
