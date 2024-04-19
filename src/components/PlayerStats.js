@@ -1,20 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { fetchPlayerInfo } from '../api';
 import PlayerRow from './PlayerRow';
-import playerIds from '../playerIds';
+import musasData from '../data/musas-data.json'; // Importing the JSON data
 
-const calculateVariation = (current, previous) => {
-    const variation = parseInt(current, 10) - parseInt(previous, 10);
-    return variation !== 0 && !isNaN(variation) ? variation : "";
-};
-
-const replaceNotRated = (elo) => (elo === "Notrated" ? "-" : elo);
-
-const hasNonDashElo = (player) => (
-    player.standard_elo !== '-' || player.rapid_elo !== '-' || player.blitz_elo !== '-'
-);
-
-const App = () => {
+const PlayerStats = () => {
     const [playersData, setPlayersData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [sortColumn, setSortColumn] = useState("standard_elo");
@@ -25,57 +13,14 @@ const App = () => {
 
     const fetchPlayersData = async () => {
         try {
-            // Check if data is already in localStorage
-            const cachedData = localStorage.getItem('playersData');
-            if (cachedData) {
-                setPlayersData(JSON.parse(cachedData));
-                setIsLoading(false);
-                return;
-            }
-
-            const promises = playerIds.map((id) => fetchPlayerInfo(id, true));
-            const playersData = await Promise.allSettled(promises);
-
-            const successfulPlayers = playerIds.map((playerId, index) => {
-                const result = playersData[index];
-                if (result.status === 'fulfilled' && result.value.name) {
-                    const { standard_elo = "Notrated", rapid_elo = "Notrated", blitz_elo = "Notrated" } = result.value;
-
-                    const player = {
-                        ...result.value,
-                        id: playerId,
-                        standard_elo: replaceNotRated(standard_elo),
-                        rapid_elo: replaceNotRated(rapid_elo),
-                        blitz_elo: replaceNotRated(blitz_elo),
-                        standard_variation: calculateVariation(result.value.history[0].standard, result.value.history[1].standard),
-                        rapid_variation: calculateVariation(result.value.history[0].rapid, result.value.history[1].rapid),
-                        blitz_variation: calculateVariation(result.value.history[0].blitz, result.value.history[1].blitz),
-                    };
-
-                    return player;
-                }
-                return null;
-            }).filter(player => player !== null && hasNonDashElo(player));
-
-            const failedPlayers = playersData
-                .filter(result => result.status === 'rejected')
-                .map((result, index) => playerIds[index]);
-
-            if (failedPlayers.length > 0) {
-                console.log(`Failed to fetch data for players with IDs: ${failedPlayers.join(', ')}`);
-            }
-
-            // Sort players based on the selected column in descending order
-            successfulPlayers.sort((a, b) => {
-                const valueA = a[sortColumn] === "-" ? 0 : parseInt(a[sortColumn], 10);
-                const valueB = b[sortColumn] === "-" ? 0 : parseInt(b[sortColumn], 10);
-                return valueB - valueA;
+            const playerArray = Object.entries(musasData).map(([id, player]) => ({ id, ...player }));
+            // Sort the playerArray by standard_elo initially
+            playerArray.sort((a, b) => {
+                const standardA = parseInt(a.elo.standard_elo) || 0;
+                const standardB = parseInt(b.elo.standard_elo) || 0;
+                return standardB - standardA;
             });
-
-            // Store data in localStorage for future use
-            localStorage.setItem('playersData', JSON.stringify(successfulPlayers));
-
-            setPlayersData(successfulPlayers);
+            setPlayersData(playerArray);
             setIsLoading(false);
         } catch (error) {
             console.error('Error fetching players data:', error);
@@ -86,16 +31,20 @@ const App = () => {
     const handleSort = (column) => {
         // If a different column is clicked, set it as the new sort column
         if (column !== sortColumn) {
-            // Sort players client-side based on the selected column in descending order
-            const sortedPlayers = [...playersData].sort((a, b) => {
-                const valueA = a[column] === "-" ? 0 : parseInt(a[column], 10);
-                const valueB = b[column] === "-" ? 0 : parseInt(b[column], 10);
-                return valueB - valueA;
-            });
-
-            setPlayersData(sortedPlayers);
             setSortColumn(column);
+            sortPlayersData(column);
         }
+    };
+
+    const sortPlayersData = (column) => {
+        // Sort players client-side based on the selected column in descending order
+        const sortedPlayers = [...playersData].sort((a, b) => {
+            const valueA = a.elo[column] === "Notrated" ? 0 : parseInt(a.elo[column], 10);
+            const valueB = b.elo[column] === "Notrated" ? 0 : parseInt(b.elo[column], 10);
+            return valueB - valueA;
+        });
+
+        setPlayersData(sortedPlayers);
     };
 
     if (isLoading) {
@@ -121,12 +70,12 @@ const App = () => {
                             key={player.id}
                             id={player.id}
                             name={player.name}
-                            classical={player.standard_elo}
-                            c_variation={player.standard_variation}
-                            rapid={player.rapid_elo}
-                            r_variation={player.rapid_variation}
-                            blitz={player.blitz_elo}
-                            b_variation={player.blitz_variation}
+                            classical={player.elo.standard_elo} 
+                            c_variation={player.standardDiff} 
+                            rapid={player.elo.rapid_elo} 
+                            r_variation={player.rapidDiff} 
+                            blitz={player.elo.blitz_elo} 
+                            b_variation={player.blitzDiff} 
                         />
                     ))}
                 </tbody>
@@ -135,4 +84,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default PlayerStats;
