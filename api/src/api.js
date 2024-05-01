@@ -165,8 +165,7 @@ const fetchEloData = async (fideIds) => {
             let blitzDiff = "";
 
             if (parsedHistory.length >= 2) {
-                standardDiff =
-                    parsedHistory[0].standard - parsedHistory[1].standard;
+                standardDiff = parsedHistory[0].standard - parsedHistory[1].standard;
                 rapidDiff = parsedHistory[0].rapid - parsedHistory[1].rapid;
                 blitzDiff = parsedHistory[0].blitz - parsedHistory[1].blitz;
 
@@ -175,10 +174,11 @@ const fetchEloData = async (fideIds) => {
                 if (rapidDiff === 0 || rapidDiff === null) rapidDiff = "";
                 if (blitzDiff === 0 || blitzDiff === null) blitzDiff = "";
             } else {
-                standardDiff = isNaN(parsedHistory[0].standard) ? "" : "new";
-                rapidDiff = isNaN(parsedHistory[0].rapid) ? "" : "new";
-                blitzDiff = isNaN(parsedHistory[0].blitz) ? "" : "new";
-
+                // Check if the history has only one record for each variant
+                const hasOneRecord = parsedHistory.every(entry => (entry.standard || entry.standard === 0) && (entry.rapid || entry.rapid === 0) && (entry.blitz || entry.blitz === 0));
+                standardDiff = hasOneRecord && parsedHistory[0].standard !== "Notrated" ? "new" : "";
+                rapidDiff = hasOneRecord && parsedHistory[0].rapid !== "Notrated" ? "new" : "";
+                blitzDiff = hasOneRecord && parsedHistory[0].blitz !== "Notrated" ? "new" : "";
             }
 
             eloData[fideId] = {
