@@ -137,6 +137,7 @@ const playerEndpointsErrorHandler = (err, res) => {
 };
 
 
+
 /**
  * Function to fetch Elo data for each FIDE ID and save it to a JSON file
  */
@@ -154,31 +155,49 @@ const fetchEloData = async (fideIds) => {
             const parsedHistory = history.map((entry) => ({
                 date: entry.date,
                 numeric_date: entry.numeric_date,
-                standard: parseInt(entry.standard) === "Notrated" ? "Not rated" : parseInt(entry.standard),
-                rapid: parseInt(entry.rapid) === "Notrated" ? "Not rated" : parseInt(entry.rapid),
-                blitz: parseInt(entry.blitz) === "Notrated" ? "Not rated" : parseInt(entry.blitz),
+                standard: entry.standard === "Notrated" ? "Not rated" : parseInt(entry.standard),
+                rapid: entry.rapid === "Notrated" ? "Not rated" : parseInt(entry.rapid),
+                blitz: entry.blitz === "Notrated" ? "Not rated" : parseInt(entry.blitz),
             }));
 
-            // Calculate differences between the first two dates
+            // Calculate differences and check if ratings are new
             let standardDiff = "";
             let rapidDiff = "";
             let blitzDiff = "";
 
-            if (parsedHistory.length >= 2) {
-                standardDiff = parsedHistory[0].standard - parsedHistory[1].standard;
-                rapidDiff = parsedHistory[0].rapid - parsedHistory[1].rapid;
-                blitzDiff = parsedHistory[0].blitz - parsedHistory[1].blitz;
+            let newStandard = false;
+            let newRapid = false;
+            let newBlitz = false;
 
-                // Convert 0 to empty string for diffs
-                if (standardDiff === 0 || standardDiff === null) standardDiff = "";
-                if (rapidDiff === 0 || rapidDiff === null) rapidDiff = "";
-                if (blitzDiff === 0 || blitzDiff === null) blitzDiff = "";
-            } else {
-                // Check if the history has only one record for each variant
-                const hasOneRecord = parsedHistory.every(entry => (entry.standard || entry.standard === 0) && (entry.rapid || entry.rapid === 0) && (entry.blitz || entry.blitz === 0));
-                standardDiff = hasOneRecord && parsedHistory[0].standard !== "Notrated" ? "new" : "";
-                rapidDiff = hasOneRecord && parsedHistory[0].rapid !== "Notrated" ? "new" : "";
-                blitzDiff = hasOneRecord && parsedHistory[0].blitz !== "Notrated" ? "new" : "";
+            if (parsedHistory.length >= 2) {
+                if (parsedHistory[0].standard !== "Not rated" && parsedHistory[1].standard !== "Not rated") {
+                    standardDiff = parsedHistory[0].standard - parsedHistory[1].standard;
+                    if (standardDiff === 0 || standardDiff === null) standardDiff = "";
+                }
+
+                if (parsedHistory[0].rapid !== "Not rated" && parsedHistory[1].rapid !== "Not rated") {
+                    rapidDiff = parsedHistory[0].rapid - parsedHistory[1].rapid;
+                    if (rapidDiff === 0 || rapidDiff === null) rapidDiff = "";
+                }
+
+                if (parsedHistory[0].blitz !== "Not rated" && parsedHistory[1].blitz !== "Not rated") {
+                    blitzDiff = parsedHistory[0].blitz - parsedHistory[1].blitz;
+                    if (blitzDiff === 0 || blitzDiff === null) blitzDiff = "";
+                }
+            } else if (parsedHistory.length === 1) {
+                if (parsedHistory[0].standard !== "" && !Number.isNaN(parsedHistory[0].standard)) {
+                    console.log("PARSED STANDARD HISTORY: " + parsedHistory[0].standard)
+                    newStandard = true;
+                }
+                if (parsedHistory[0].rapid !== "" && !Number.isNaN(parsedHistory[0].rapid)) {
+                    console.log("PARSED RAPID HISTORY: " + parsedHistory[0].rapid)
+
+                    newRapid = true;
+                }
+                if (parsedHistory[0].blitz !== "" && !Number.isNaN(parsedHistory[0].blitz)) {
+                    console.log("PARSED BLITZ HISTORY: " + parsedHistory[0].blitz)
+                    newBlitz = true;
+                }
             }
 
             eloData[fideId] = {
@@ -187,24 +206,41 @@ const fetchEloData = async (fideIds) => {
                 standardDiff,
                 rapidDiff,
                 blitzDiff,
+                newStandard,
+                newRapid,
+                newBlitz,
             };
 
-            console.log(`Elo data for FIDE ID ${fideId}:`, playerElo);
+            console.log(`\nElo data for FIDE ID ${fideId}:`, playerElo);
             console.log(`Name for FIDE ID ${fideId}:`, personalData.name);
             console.log(
                 `Standard Elo Difference for FIDE ID ${fideId}:`,
                 standardDiff
             );
             console.log(
+                `Is new standard rating for FIDE ID ${fideId}:`,
+                newStandard
+            );
+
+            console.log(
                 `Rapid Elo Difference for FIDE ID ${fideId}:`,
                 rapidDiff
             );
             console.log(
+                `Is new rapid rating for FIDE ID ${fideId}:`,
+                newRapid
+            );
+
+            console.log(
                 `Blitz Elo Difference for FIDE ID ${fideId}:`,
                 blitzDiff
             );
+            console.log(
+                `Is new blitz rating for FIDE ID ${fideId}:`,
+                newBlitz
+            );
         } catch (error) {
-            console.error(`Error fetching data for FIDE ID ${fideId}:`, error);
+            console.error(`\nError fetching data for FIDE ID ${fideId}:`, error);
         }
     }
     return eloData;
@@ -266,9 +302,9 @@ const saveEloDataToFile = async () => {
         const dataDirectory = path.resolve(__dirname, '../../src/data');
         const filePath = path.join(dataDirectory, 'musas-data.json');
         fs.writeFileSync(filePath, JSON.stringify(eloData, null, 2));
-        console.log('Elo data saved to musas-data.json');
+        console.log('\nElo data saved to musas-data.json');
     } catch (error) {
-        console.error('Error fetching or saving Elo data:', error);
+        console.error('\nError fetching or saving Elo data:', error);
     }
 };
 
