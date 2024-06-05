@@ -72,10 +72,13 @@ const PlayerStats = () => {
                             name={player.name}
                             classical={player.elo.standard_elo} 
                             c_variation={player.standardDiff} 
+                            newStandard={player.newStandard}
                             rapid={player.elo.rapid_elo} 
                             r_variation={player.rapidDiff} 
+                            newRapid={player.newRapid}
                             blitz={player.elo.blitz_elo} 
                             b_variation={player.blitzDiff} 
+                            newBlitz={player.newBlitz}
                         />
                     ))}
                 </tbody>
