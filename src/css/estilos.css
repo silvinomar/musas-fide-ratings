@@ -73,6 +73,16 @@ body {
     content: '+';
   }
 
+  .new {
+    color: white;
+    background: green;
+    padding: 2px 4px;
+    font-size: 60%;
+    margin-left: 2px;
+    vertical-align: super;
+    font-weight: 600;
+  }
+
   .first{
     color:white !important;
     background: green !important;
