@@ -36,7 +36,7 @@
     "name": "Chambel De Matos, Luis ",
     "standardDiff": "",
     "rapidDiff": "",
-    "blitzDiff": -9,
+    "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false
@@ -57,12 +57,12 @@
   },
   "1928660": {
     "elo": {
-      "standard_elo": "1655",
+      "standard_elo": "1647",
       "rapid_elo": "1683",
       "blitz_elo": "1629"
     },
     "name": "Cunha, Rui Pedro ",
-    "standardDiff": 17,
+    "standardDiff": -8,
     "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
@@ -141,12 +141,12 @@
   },
   "1971891": {
     "elo": {
-      "standard_elo": "1606",
+      "standard_elo": "1581",
       "rapid_elo": "1563",
       "blitz_elo": "1574"
     },
     "name": "Almeida, Silvino ",
-    "standardDiff": 34,
+    "standardDiff": -25,
     "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
@@ -174,7 +174,7 @@
       "blitz_elo": "Notrated"
     },
     "name": "Martins, Rui Andre ",
-    "standardDiff": -19,
+    "standardDiff": "",
     "rapidDiff": "",
     "blitzDiff": null,
     "newStandard": false,
@@ -197,7 +197,7 @@
   },
   "1976613": {
     "elo": {
-      "standard_elo": "Notrated",
+      "standard_elo": "1620",
       "rapid_elo": "1633",
       "blitz_elo": "Notrated"
     },
@@ -216,7 +216,7 @@
       "blitz_elo": "Notrated"
     },
     "name": "Dorokhov, Yurii ",
-    "standardDiff": -18,
+    "standardDiff": "",
     "rapidDiff": null,
     "blitzDiff": null,
     "newStandard": false,
@@ -272,12 +272,12 @@
       "blitz_elo": "1600"
     },
     "name": "Forero Valencia, Simon Enrique ",
-    "standardDiff": "",
-    "rapidDiff": "",
+    "standardDiff": null,
+    "rapidDiff": null,
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": true
+    "newBlitz": false
   },
   "1980661": {
     "elo": {
@@ -286,12 +286,12 @@
       "blitz_elo": "1460"
     },
     "name": "Soares, Jean Dyego Gomes ",
-    "standardDiff": "",
-    "rapidDiff": "",
+    "standardDiff": null,
+    "rapidDiff": null,
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": true
+    "newBlitz": false
   },
   "1983148": {
     "elo": {
@@ -302,7 +302,7 @@
     "name": "Martins, Joao Peixoto ",
     "standardDiff": null,
     "rapidDiff": "",
-    "blitzDiff": null,
+    "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false
@@ -323,14 +323,14 @@
   },
   "14173328": {
     "elo": {
-      "standard_elo": "1831",
+      "standard_elo": "1833",
       "rapid_elo": "1753",
       "blitz_elo": "1749"
     },
     "name": "Afendyk, Glib ",
-    "standardDiff": -3,
+    "standardDiff": 2,
     "rapidDiff": "",
-    "blitzDiff": -15,
+    "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false
@@ -351,14 +351,14 @@
   },
   "34173153": {
     "elo": {
-      "standard_elo": "1530",
+      "standard_elo": "1512",
       "rapid_elo": "1536",
       "blitz_elo": "1615"
     },
     "name": "Snizhynska, Maryna ",
-    "standardDiff": 4,
+    "standardDiff": -18,
     "rapidDiff": "",
-    "blitzDiff": -18,
+    "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false
@@ -370,11 +370,11 @@
       "blitz_elo": "1894"
     },
     "name": "Vikhrov, Dmytro ",
-    "standardDiff": "",
-    "rapidDiff": "",
+    "standardDiff": null,
+    "rapidDiff": null,
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": true
+    "newBlitz": false
   }
 }
