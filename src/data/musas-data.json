@@ -62,7 +62,7 @@
       "blitz_elo": "1629"
     },
     "name": "Cunha, Rui Pedro ",
-    "standardDiff": -8,
+    "standardDiff": "",
     "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
@@ -146,7 +146,7 @@
       "blitz_elo": "1574"
     },
     "name": "Almeida, Silvino ",
-    "standardDiff": -25,
+    "standardDiff": "",
     "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
@@ -202,7 +202,7 @@
       "blitz_elo": "Notrated"
     },
     "name": "Baptista, Tiago Miranda Pires ",
-    "standardDiff": null,
+    "standardDiff": "",
     "rapidDiff": "",
     "blitzDiff": null,
     "newStandard": false,
@@ -321,6 +321,20 @@
     "newRapid": false,
     "newBlitz": false
   },
+  "1986945": {
+    "elo": {
+      "standard_elo": "Notrated",
+      "rapid_elo": "1904",
+      "blitz_elo": "Notrated"
+    },
+    "name": "Pedrosa, Pedro ",
+    "standardDiff": "",
+    "rapidDiff": "",
+    "blitzDiff": "",
+    "newStandard": false,
+    "newRapid": true,
+    "newBlitz": false
+  },
   "14173328": {
     "elo": {
       "standard_elo": "1833",
@@ -328,7 +342,7 @@
       "blitz_elo": "1749"
     },
     "name": "Afendyk, Glib ",
-    "standardDiff": 2,
+    "standardDiff": "",
     "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
@@ -356,7 +370,7 @@
       "blitz_elo": "1615"
     },
     "name": "Snizhynska, Maryna ",
-    "standardDiff": -18,
+    "standardDiff": "",
     "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
