@@ -328,11 +328,11 @@
       "blitz_elo": "Notrated"
     },
     "name": "Pedrosa, Pedro ",
-    "standardDiff": "",
+    "standardDiff": null,
     "rapidDiff": "",
-    "blitzDiff": "",
+    "blitzDiff": null,
     "newStandard": false,
-    "newRapid": true,
+    "newRapid": false,
     "newBlitz": false
   },
   "14173328": {
