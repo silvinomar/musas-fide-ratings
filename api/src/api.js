@@ -146,6 +146,8 @@ const playerEndpointsErrorHandler = (err, res) => {
  */
 const fetchEloData = async (fideIds) => {
     const eloData = {};
+    const fetchDate = new Date().toISOString(); // Obtém a data e hora atual no formato ISO
+
     for (const fideId of fideIds) {
         try {
             const [playerElo, personalData, history] = await Promise.all([
@@ -189,16 +191,12 @@ const fetchEloData = async (fideIds) => {
                 }
             } else if (parsedHistory.length === 1) {
                 if (parsedHistory[0].standard !== "" && !Number.isNaN(parsedHistory[0].standard)) {
-                    console.log("PARSED STANDARD HISTORY: " + parsedHistory[0].standard)
                     newStandard = true;
                 }
                 if (parsedHistory[0].rapid !== "" && !Number.isNaN(parsedHistory[0].rapid)) {
-                    console.log("PARSED RAPID HISTORY: " + parsedHistory[0].rapid)
-
                     newRapid = true;
                 }
                 if (parsedHistory[0].blitz !== "" && !Number.isNaN(parsedHistory[0].blitz)) {
-                    console.log("PARSED BLITZ HISTORY: " + parsedHistory[0].blitz)
                     newBlitz = true;
                 }
             }
@@ -212,42 +210,17 @@ const fetchEloData = async (fideIds) => {
                 newStandard,
                 newRapid,
                 newBlitz,
+                fetchDate, // Adiciona a data de obtenção dos resultados
             };
 
             console.log(`\nElo data for FIDE ID ${fideId}:`, playerElo);
-            console.log(`Name for FIDE ID ${fideId}:`, personalData.name);
-            console.log(
-                `Standard Elo Difference for FIDE ID ${fideId}:`,
-                standardDiff
-            );
-            console.log(
-                `Is new standard rating for FIDE ID ${fideId}:`,
-                newStandard
-            );
-
-            console.log(
-                `Rapid Elo Difference for FIDE ID ${fideId}:`,
-                rapidDiff
-            );
-            console.log(
-                `Is new rapid rating for FIDE ID ${fideId}:`,
-                newRapid
-            );
-
-            console.log(
-                `Blitz Elo Difference for FIDE ID ${fideId}:`,
-                blitzDiff
-            );
-            console.log(
-                `Is new blitz rating for FIDE ID ${fideId}:`,
-                newBlitz
-            );
         } catch (error) {
             console.error(`\nError fetching data for FIDE ID ${fideId}:`, error);
         }
     }
     return eloData;
 };
+
 
 /**
  * Function to save Elo data to a JSON file
