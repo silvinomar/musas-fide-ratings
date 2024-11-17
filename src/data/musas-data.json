@@ -11,7 +11,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1912704": {
     "elo": {
@@ -25,7 +26,8 @@
     "blitzDiff": null,
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1915312": {
     "elo": {
@@ -39,7 +41,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1924893": {
     "elo": {
@@ -53,7 +56,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1928660": {
     "elo": {
@@ -67,7 +71,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1939823": {
     "elo": {
@@ -81,7 +86,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1947745": {
     "elo": {
@@ -95,7 +101,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1960210": {
     "elo": {
@@ -109,7 +116,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1967495": {
     "elo": {
@@ -123,7 +131,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1969323": {
     "elo": {
@@ -137,7 +146,8 @@
     "blitzDiff": null,
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1971891": {
     "elo": {
@@ -151,7 +161,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1972332": {
     "elo": {
@@ -165,7 +176,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1976494": {
     "elo": {
@@ -179,21 +191,23 @@
     "blitzDiff": null,
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1976508": {
     "elo": {
       "standard_elo": "1974",
-      "rapid_elo": "1761",
+      "rapid_elo": "1773",
       "blitz_elo": "1876"
     },
     "name": "Ribeiro, Diogo Lousa ",
     "standardDiff": "",
-    "rapidDiff": "",
+    "rapidDiff": 12,
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1976613": {
     "elo": {
@@ -207,7 +221,8 @@
     "blitzDiff": null,
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1976648": {
     "elo": {
@@ -221,7 +236,8 @@
     "blitzDiff": null,
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1976656": {
     "elo": {
@@ -235,7 +251,8 @@
     "blitzDiff": null,
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1980378": {
     "elo": {
@@ -249,7 +266,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1980521": {
     "elo": {
@@ -263,7 +281,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1980645": {
     "elo": {
@@ -277,7 +296,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1980661": {
     "elo": {
@@ -291,7 +311,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1983148": {
     "elo": {
@@ -305,7 +326,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1983377": {
     "elo": {
@@ -319,21 +341,23 @@
     "blitzDiff": null,
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "1986945": {
     "elo": {
       "standard_elo": "Notrated",
-      "rapid_elo": "1904",
+      "rapid_elo": "1817",
       "blitz_elo": "Notrated"
     },
     "name": "Pedrosa, Pedro ",
     "standardDiff": null,
-    "rapidDiff": "",
+    "rapidDiff": -45,
     "blitzDiff": null,
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "14173328": {
     "elo": {
@@ -347,7 +371,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "24151327": {
     "elo": {
@@ -361,7 +386,8 @@
     "blitzDiff": null,
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "34173153": {
     "elo": {
@@ -375,7 +401,8 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   },
   "34198261": {
     "elo": {
@@ -389,6 +416,7 @@
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
-    "newBlitz": false
+    "newBlitz": false,
+    "fetchDate": "2024-11-17T16:29:36.268Z"
   }
 }
