@@ -7,7 +7,7 @@ const app = express();
 const fs = require("fs");
 const path = require('path');
 
-//Import fide Ids to get the data from
+// Import fide Ids to get the data from
 const fideIds = require('../../src/data/musas-fideIds.js');
 
 const {
@@ -56,8 +56,8 @@ app.get("/player/:fide_num/*", (req, res, next) => {
 
     if (isNaN(fide_num)) {
         return res.status(400).json(
-            buildErrorResponse("The player's fide number must be a positive integer number",
-            ));
+            buildErrorResponse("The player's fide number must be a positive integer number")
+        );
     } else {
         next();
     }
@@ -140,13 +140,15 @@ const playerEndpointsErrorHandler = (err, res) => {
     ));
 };
 
-
 /**
  * Function to fetch Elo data for each FIDE ID and save it to a JSON file
  */
 const fetchEloData = async (fideIds) => {
     const eloData = {};
     const fetchDate = new Date().toISOString(); // Obtém a data e hora atual no formato ISO
+
+    // Log the loaded fideIds to check if the list is correct
+    console.log('Loaded fideIds:', fideIds);
 
     for (const fideId of fideIds) {
         try {
@@ -156,14 +158,20 @@ const fetchEloData = async (fideIds) => {
                 getPlayerHistory(fideId),
             ]);
 
+            // Log the responses from the API calls to verify data
+            console.log(`\nFetched data for FIDE ID ${fideId}:`, { playerElo, personalData, history });
+
             // Parse history data
             const parsedHistory = history.map((entry) => ({
                 date: entry.date,
                 numeric_date: entry.numeric_date,
-                standard: entry.standard === "Notrated" ? "Not rated" : parseInt(entry.standard),
-                rapid: entry.rapid === "Notrated" ? "Not rated" : parseInt(entry.rapid),
-                blitz: entry.blitz === "Notrated" ? "Not rated" : parseInt(entry.blitz),
+                standard: entry.standard === "Notrated" || isNaN(parseInt(entry.standard)) ? "Not rated" : parseInt(entry.standard),
+                rapid: entry.rapid === "Notrated" || isNaN(parseInt(entry.rapid)) ? "Not rated" : parseInt(entry.rapid),
+                blitz: entry.blitz === "Notrated" || isNaN(parseInt(entry.blitz)) ? "Not rated" : parseInt(entry.blitz),
             }));
+
+            // Log parsed history to ensure the transformation is correct
+            console.log(`Parsed history for FIDE ID ${fideId}:`, parsedHistory);
 
             // Calculate differences and check if ratings are new
             let standardDiff = "";
@@ -201,26 +209,35 @@ const fetchEloData = async (fideIds) => {
                 }
             }
 
+            // Log calculated differences
+            console.log(`Standard Diff for FIDE ID ${fideId}:`, standardDiff);
+            console.log(`Rapid Diff for FIDE ID ${fideId}:`, rapidDiff);
+            console.log(`Blitz Diff for FIDE ID ${fideId}:`, blitzDiff);
+
+            // Populate eloData with all relevant information
             eloData[fideId] = {
                 elo: playerElo,
                 name: personalData.name,
+                standard: parsedHistory[0]?.standard || "Not rated",  // Include standard rating
+                rapid: parsedHistory[0]?.rapid || "Not rated",        // Include rapid rating
+                blitz: parsedHistory[0]?.blitz || "Not rated",        // Include blitz rating
                 standardDiff,
                 rapidDiff,
                 blitzDiff,
                 newStandard,
                 newRapid,
                 newBlitz,
-                fetchDate, // Adiciona a data de obtenção dos resultados
+                fetchDate, // Add fetch date
             };
 
-            console.log(`\nElo data for FIDE ID ${fideId}:`, playerElo);
+            console.log(`Elo data for FIDE ID ${fideId}:`, eloData[fideId]);
         } catch (error) {
             console.error(`\nError fetching data for FIDE ID ${fideId}:`, error);
         }
     }
+
     return eloData;
 };
-
 
 /**
  * Function to save Elo data to a JSON file
@@ -230,6 +247,10 @@ const saveEloDataToFile = async () => {
         const eloData = await fetchEloData(fideIds);
         const dataDirectory = path.resolve(__dirname, '../../src/data');
         const filePath = path.join(dataDirectory, 'musas-data.json');
+        
+        // Log the eloData to be saved to the file
+        console.log('Final Elo Data being saved to file:', eloData);
+        
         fs.writeFileSync(filePath, JSON.stringify(eloData, null, 2));
         console.log('\nElo data saved to musas-data.json');
     } catch (error) {
