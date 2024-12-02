@@ -69,6 +69,11 @@ body {
     color: red;
   }
 
+  th.active::after{
+    content: '▼';
+    margin-left: 5px;
+  }
+
   .true::before{
     content: '+';
   }
