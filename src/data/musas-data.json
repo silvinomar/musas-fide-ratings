@@ -1,422 +1,524 @@
 {
   "1910116": {
     "elo": {
-      "standard_elo": "1677",
-      "rapid_elo": "Notrated",
-      "blitz_elo": "1678"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Silva, Joao Miguel Carvalho Lop ",
+    "standard": 1677,
+    "rapid": "Not rated",
+    "blitz": 1678,
     "standardDiff": "",
-    "rapidDiff": null,
+    "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1912704": {
     "elo": {
-      "standard_elo": "Notrated",
-      "rapid_elo": "Notrated",
-      "blitz_elo": "Notrated"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Sousa, Hugo ",
+    "standard": 1013,
+    "rapid": "Not rated",
+    "blitz": "Not rated",
     "standardDiff": "",
     "rapidDiff": "",
-    "blitzDiff": null,
+    "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1915312": {
     "elo": {
-      "standard_elo": "1584",
-      "rapid_elo": "1519",
-      "blitz_elo": "1600"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Chambel De Matos, Luis ",
+    "standard": 1584,
+    "rapid": 1519,
+    "blitz": 1600,
     "standardDiff": "",
     "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1924893": {
     "elo": {
-      "standard_elo": "Notrated",
-      "rapid_elo": "1597",
-      "blitz_elo": "1483"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Topa, Paulo ",
-    "standardDiff": null,
+    "standard": "Not rated",
+    "rapid": 1597,
+    "blitz": 1483,
+    "standardDiff": "",
     "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1928660": {
     "elo": {
-      "standard_elo": "1647",
-      "rapid_elo": "1683",
-      "blitz_elo": "1629"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Cunha, Rui Pedro ",
+    "standard": 1647,
+    "rapid": 1683,
+    "blitz": 1629,
     "standardDiff": "",
     "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1939823": {
     "elo": {
-      "standard_elo": "1569",
-      "rapid_elo": "1568",
-      "blitz_elo": "1539"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Borovsky, Igor ",
+    "standard": 1569,
+    "rapid": 1568,
+    "blitz": 1539,
     "standardDiff": "",
     "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1947745": {
     "elo": {
-      "standard_elo": "1612",
-      "rapid_elo": "1552",
-      "blitz_elo": "1551"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Nogueira, Luis Filipe ",
+    "standard": 1612,
+    "rapid": 1552,
+    "blitz": 1551,
     "standardDiff": "",
     "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1960210": {
     "elo": {
-      "standard_elo": "Notrated",
-      "rapid_elo": "Notrated",
-      "blitz_elo": "1667"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Abdelatiff, Samir ",
-    "standardDiff": null,
-    "rapidDiff": null,
+    "standard": "Not rated",
+    "rapid": "Not rated",
+    "blitz": 1667,
+    "standardDiff": "",
+    "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1967495": {
     "elo": {
-      "standard_elo": "Notrated",
-      "rapid_elo": "1515",
-      "blitz_elo": "1486"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Salazar, Luis Antonio Duque ",
-    "standardDiff": null,
+    "standard": "Not rated",
+    "rapid": 1515,
+    "blitz": 1486,
+    "standardDiff": "",
     "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1969323": {
     "elo": {
-      "standard_elo": "1471",
-      "rapid_elo": "1517",
-      "blitz_elo": "Notrated"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Figueiredo, Luis ",
+    "standard": 1471,
+    "rapid": 1517,
+    "blitz": "Not rated",
     "standardDiff": "",
     "rapidDiff": "",
-    "blitzDiff": null,
+    "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1971891": {
     "elo": {
-      "standard_elo": "1581",
-      "rapid_elo": "1563",
-      "blitz_elo": "1574"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Almeida, Silvino ",
+    "standard": 1581,
+    "rapid": 1563,
+    "blitz": 1574,
     "standardDiff": "",
     "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1972332": {
     "elo": {
-      "standard_elo": "Notrated",
-      "rapid_elo": "Notrated",
-      "blitz_elo": "1632"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Silva, Guilherme Jose Teixeira ",
-    "standardDiff": null,
-    "rapidDiff": null,
+    "standard": "Not rated",
+    "rapid": "Not rated",
+    "blitz": 1632,
+    "standardDiff": "",
+    "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1976494": {
     "elo": {
-      "standard_elo": "1552",
-      "rapid_elo": "1565",
-      "blitz_elo": "Notrated"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Martins, Rui Andre ",
+    "standard": 1552,
+    "rapid": 1565,
+    "blitz": "Not rated",
     "standardDiff": "",
     "rapidDiff": "",
-    "blitzDiff": null,
+    "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1976508": {
     "elo": {
-      "standard_elo": "1974",
-      "rapid_elo": "1773",
-      "blitz_elo": "1876"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Ribeiro, Diogo Lousa ",
+    "standard": 1974,
+    "rapid": 1773,
+    "blitz": 1876,
     "standardDiff": "",
-    "rapidDiff": 12,
+    "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1976613": {
     "elo": {
-      "standard_elo": "1620",
-      "rapid_elo": "1633",
-      "blitz_elo": "Notrated"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Baptista, Tiago Miranda Pires ",
+    "standard": 1620,
+    "rapid": 1633,
+    "blitz": "Not rated",
     "standardDiff": "",
     "rapidDiff": "",
-    "blitzDiff": null,
+    "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1976648": {
     "elo": {
-      "standard_elo": "1669",
-      "rapid_elo": "Notrated",
-      "blitz_elo": "Notrated"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Dorokhov, Yurii ",
+    "standard": 1669,
+    "rapid": "Not rated",
+    "blitz": "Not rated",
     "standardDiff": "",
-    "rapidDiff": null,
-    "blitzDiff": null,
+    "rapidDiff": "",
+    "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1976656": {
     "elo": {
-      "standard_elo": "1582",
-      "rapid_elo": "1529",
-      "blitz_elo": "Notrated"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Ekberg Dias, Vicente ",
+    "standard": 1582,
+    "rapid": 1529,
+    "blitz": "Not rated",
     "standardDiff": "",
     "rapidDiff": "",
-    "blitzDiff": null,
+    "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1980378": {
     "elo": {
-      "standard_elo": "1777",
-      "rapid_elo": "1574",
-      "blitz_elo": "1725"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Carlos, Gabriel ",
+    "standard": 1777,
+    "rapid": 1574,
+    "blitz": 1725,
     "standardDiff": "",
     "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1980521": {
     "elo": {
-      "standard_elo": "Notrated",
-      "rapid_elo": "Notrated",
-      "blitz_elo": "1441"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Lima, Miguel Alexandre ",
-    "standardDiff": null,
-    "rapidDiff": null,
+    "standard": "Not rated",
+    "rapid": "Not rated",
+    "blitz": 1441,
+    "standardDiff": "",
+    "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1980645": {
     "elo": {
-      "standard_elo": "Notrated",
-      "rapid_elo": "Notrated",
-      "blitz_elo": "1600"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Forero Valencia, Simon Enrique ",
-    "standardDiff": null,
-    "rapidDiff": null,
+    "standard": "Not rated",
+    "rapid": "Not rated",
+    "blitz": 1600,
+    "standardDiff": "",
+    "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1980661": {
     "elo": {
-      "standard_elo": "Notrated",
-      "rapid_elo": "Notrated",
-      "blitz_elo": "1460"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Soares, Jean Dyego Gomes ",
-    "standardDiff": null,
-    "rapidDiff": null,
+    "standard": "Not rated",
+    "rapid": "Not rated",
+    "blitz": 1460,
+    "standardDiff": "",
+    "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1983148": {
     "elo": {
-      "standard_elo": "Notrated",
-      "rapid_elo": "1515",
-      "blitz_elo": "1501"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Martins, Joao Peixoto ",
-    "standardDiff": null,
-    "rapidDiff": "",
+    "standard": "Not rated",
+    "rapid": 1581,
+    "blitz": 1501,
+    "standardDiff": "",
+    "rapidDiff": 66,
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1983377": {
     "elo": {
-      "standard_elo": "Notrated",
-      "rapid_elo": "1452",
-      "blitz_elo": "Notrated"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Vale, Nuno ",
-    "standardDiff": null,
+    "standard": "Not rated",
+    "rapid": 1452,
+    "blitz": "Not rated",
+    "standardDiff": "",
     "rapidDiff": "",
-    "blitzDiff": null,
+    "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "1986945": {
     "elo": {
-      "standard_elo": "Notrated",
-      "rapid_elo": "1817",
-      "blitz_elo": "Notrated"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Pedrosa, Pedro ",
-    "standardDiff": null,
-    "rapidDiff": -45,
-    "blitzDiff": null,
+    "standard": "Not rated",
+    "rapid": 1817,
+    "blitz": "Not rated",
+    "standardDiff": "",
+    "rapidDiff": "",
+    "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "14173328": {
     "elo": {
-      "standard_elo": "1833",
-      "rapid_elo": "1753",
-      "blitz_elo": "1749"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Afendyk, Glib ",
+    "standard": 1833,
+    "rapid": 1753,
+    "blitz": 1749,
     "standardDiff": "",
     "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
+  },
+  "14802848": {
+    "elo": {
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
+    },
+    "name": "Nombora, William dos Santos ",
+    "standard": 1588,
+    "rapid": 1712,
+    "blitz": "Not rated",
+    "standardDiff": "",
+    "rapidDiff": 124,
+    "blitzDiff": "",
+    "newStandard": false,
+    "newRapid": false,
+    "newBlitz": false,
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "24151327": {
     "elo": {
-      "standard_elo": "1740",
-      "rapid_elo": "1731",
-      "blitz_elo": "Notrated"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Podymov, Andrei ",
+    "standard": 1740,
+    "rapid": 1731,
+    "blitz": "Not rated",
     "standardDiff": "",
     "rapidDiff": "",
-    "blitzDiff": null,
+    "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "34173153": {
     "elo": {
-      "standard_elo": "1512",
-      "rapid_elo": "1536",
-      "blitz_elo": "1615"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Snizhynska, Maryna ",
+    "standard": 1512,
+    "rapid": 1536,
+    "blitz": 1615,
     "standardDiff": "",
     "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   },
   "34198261": {
     "elo": {
-      "standard_elo": "Notrated",
-      "rapid_elo": "Notrated",
-      "blitz_elo": "1894"
+      "standard_elo": "",
+      "rapid_elo": "",
+      "blitz_elo": ""
     },
     "name": "Vikhrov, Dmytro ",
-    "standardDiff": null,
-    "rapidDiff": null,
+    "standard": "Not rated",
+    "rapid": "Not rated",
+    "blitz": 1894,
+    "standardDiff": "",
+    "rapidDiff": "",
     "blitzDiff": "",
     "newStandard": false,
     "newRapid": false,
     "newBlitz": false,
-    "fetchDate": "2024-11-17T16:29:36.268Z"
+    "fetchDate": "2024-12-02T21:08:41.310Z"
   }
 }
