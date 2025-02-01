@@ -12,7 +12,7 @@ function App() {
     <div>
       <PlayerStats />
       <footer>
-        <p>User interface to display FIDE ratings from <a href="http://musas.pegada.net/" target='_blank' rel='noreferrer'>Musas</a> players by <a href="https://github.com/silvinomar" target="_blank" rel="noreferrer">silvinomar</a>.</p>
+        <p>User interface to display FIDE ratings from <a href="https://espacomusas.pt/" target='_blank' rel='noreferrer'>Musas</a> players by <a href="https://github.com/silvinomar" target="_blank" rel="noreferrer">silvinomar</a>.</p>
         <p>Data retrieved with the <a href="https://github.com/xRuiAlves/fide-ratings-scraper" target='_blank' rel="noreferrer">FIDE ratings scraper</a> by Rui Alves. </p>
         <p>Last update: <b>{formattedDate}</b></p>
       </footer>
