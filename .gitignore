@@ -2,13 +2,7 @@
 
 # dependencies
 /node_modules
-/api/node_modules
-/local_scraper
-/.pnp
-.pnp.js
-
-# testing
-/coverage
+/fide-api/node_modules
 
 # production
 /build
