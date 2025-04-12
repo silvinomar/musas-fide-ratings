@@ -45,20 +45,13 @@ const fideIds = [
     34184759,
     1986945,
     14802848,
-    1980645,
-    1965263,
-    1980521,
-    34184740,
-    34184767,
-    34184759,
-    1983733,
-    1979280,
-    1937839,
     1987763,
     14800373,
     1987283,
-    1987810,
-    34197885
+    1987810
 ];
 
-module.exports = fideIds;
+// Remove duplicatas
+const uniqueFideIds = [...new Set(fideIds)];
+
+module.exports = uniqueFideIds;
