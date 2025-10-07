@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/musas-fide-ratings/static/css/main.434045d5.css",
-    "main.js": "/musas-fide-ratings/static/js/main.5cb1e990.js",
+    "main.js": "/musas-fide-ratings/static/js/main.bd1f9d5b.js",
     "index.html": "/musas-fide-ratings/index.html",
     "main.434045d5.css.map": "/musas-fide-ratings/static/css/main.434045d5.css.map",
-    "main.5cb1e990.js.map": "/musas-fide-ratings/static/js/main.5cb1e990.js.map"
+    "main.bd1f9d5b.js.map": "/musas-fide-ratings/static/js/main.bd1f9d5b.js.map"
   },
   "entrypoints": [
     "static/css/main.434045d5.css",
-    "static/js/main.5cb1e990.js"
+    "static/js/main.bd1f9d5b.js"
   ]
 }
