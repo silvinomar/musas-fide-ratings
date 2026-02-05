@@ -1,19 +1,23 @@
 import React from 'react';
 import PlayerStats from './components/PlayerStats';
-import musasData from './data/musas-data.json'; 
+import musasData from './data/musas-data.json';
 
 function App() {
 
-    const lastUpdate = Object.values(musasData)?.[0]?.fetchDate || null;
-    // Format date "YYYY-MM-DD"
-    const formattedDate = lastUpdate ? new Date(lastUpdate).toISOString().split('T')[0] : 'N/A';
-  
+  const lastUpdate = Object.values(musasData)?.[0]?.fetchDate || null;
+  // Format date "YYYY-MM-DD"
+  const formattedDate = lastUpdate ? new Date(lastUpdate).toISOString().split('T')[0] : 'N/A';
+
   return (
     <div>
       <PlayerStats />
       <footer>
-        <p>User interface to display FIDE ratings from <a href="https://espacomusas.pt/" target='_blank' rel='noreferrer'>Musas</a> players by <a href="https://github.com/silvinomar" target="_blank" rel="noreferrer">silvinomar</a>.</p>
-        <p>Last update: <b>{formattedDate}</b></p>
+        <p>
+          FIDE ratings tracker for <a href="https://espacomusas.pt/" target='_blank' rel='noreferrer'>Musas</a> chess players
+          <span className="separator">|</span>
+          Built by <a href="https://github.com/silvinomar" target="_blank" rel="noreferrer">silvinomar</a>
+        </p>
+        <p className="last-update">Updated {formattedDate}</p>
       </footer>
     </div>
   );
