@@ -15,7 +15,7 @@ function App() {
         <p>
           FIDE ratings tracker for <a href="https://espacomusas.pt/" target='_blank' rel='noreferrer'>Musas</a> chess players
           <span className="separator">|</span>
-          Built by <a href="https://github.com/silvinomar" target="_blank" rel="noreferrer">silvinomar</a>
+          Created by <a href="https://github.com/silvinomar" target="_blank" rel="noreferrer">silvinomar</a>
         </p>
         <p className="last-update">Updated {formattedDate}</p>
       </footer>
