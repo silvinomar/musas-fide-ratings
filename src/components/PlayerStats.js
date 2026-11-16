@@ -1,104 +1,66 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import PlayerRow from './PlayerRow';
 import musasData from '../data/musas-data.json';
 
-// Um jogador é válido se tiver nome e este não for "N/A"
+const ITEMS_PER_PAGE = 15;
+
+// Um jogador é válido se tiver nome e este não for "N/A" (jogadores que a FIDE não encontrou)
 const isValidPlayer = (player) => {
     const name = typeof player.name === 'string' ? player.name.trim() : '';
     return name !== '' && name.toUpperCase() !== 'N/A';
 };
 
+const getRatingValue = (ratingData) => {
+    if (ratingData === "Not rated") return 0;
+    if (typeof ratingData === 'object' && ratingData.rating) {
+        return ratingData.rating;
+    }
+    return parseInt(ratingData, 10) || 0;
+};
+
+// Os dados vêm de um JSON estático, por isso são preparados uma só vez, fora do componente
+const allPlayers = Object.entries(musasData)
+    .map(([id, player]) => ({ id, ...player }))
+    .filter(isValidPlayer);
+
 const PlayerStats = () => {
-    const [playersData, setPlayersData] = useState(null);
-    const [filteredPlayers, setFilteredPlayers] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
     const [sortColumn, setSortColumn] = useState("standard");
-    const [displayCount, setDisplayCount] = useState(15);
-    const [itemsPerPage] = useState(15);
+    const [displayCount, setDisplayCount] = useState(ITEMS_PER_PAGE);
     const [searchTerm, setSearchTerm] = useState('');
 
-    useEffect(() => {
-        fetchPlayersData();
-    }, []);
+    // Lista ordenada pela coluna escolhida
+    const sortedPlayers = useMemo(
+        () => [...allPlayers].sort((a, b) => getRatingValue(b[sortColumn]) - getRatingValue(a[sortColumn])),
+        [sortColumn]
+    );
 
-    useEffect(() => {
-        if (playersData) {
-            handleSearch(searchTerm);
-        }
-    }, [searchTerm, playersData]);
+    const isSearching = searchTerm.trim() !== '';
 
-    const fetchPlayersData = async () => {
-        try {
-            // Ignora jogadores que a FIDE não encontrou (gravados com o nome "N/A")
-            const playerArray = Object.entries(musasData)
-                .map(([id, player]) => ({ id, ...player }))
-                .filter(player => isValidPlayer(player));
-
-            playerArray.sort((a, b) => {
-                const standardA = getRatingValue(a.standard);
-                const standardB = getRatingValue(b.standard);
-                return standardB - standardA;
-            });
-
-            setPlayersData(playerArray);
-            setFilteredPlayers(playerArray);
-            setIsLoading(false);
-        } catch (error) {
-            console.error('Error fetching players data:', error);
-            setIsLoading(false);
-        }
-    };
-
-    const getRatingValue = (ratingData) => {
-        if (ratingData === "Not rated") return 0;
-        if (typeof ratingData === 'object' && ratingData.rating) {
-            return ratingData.rating;
-        }
-        return parseInt(ratingData, 10) || 0;
-    };
-
-    const handleSearch = (term) => {
-        if (!term.trim()) {
-            setFilteredPlayers(playersData);
-            setDisplayCount(itemsPerPage);
-            return;
-        }
-
-        const filtered = playersData.filter(player =>
-            player.name.toLowerCase().includes(term.toLowerCase())
-        );
-        setFilteredPlayers(filtered);
-        setDisplayCount(filtered.length); // Show all results when searching
-    };
+    // Lista filtrada pela pesquisa (mantém a ordenação)
+    const filteredPlayers = useMemo(() => {
+        if (!isSearching) return sortedPlayers;
+        const term = searchTerm.trim().toLowerCase();
+        return sortedPlayers.filter(player => player.name.toLowerCase().includes(term));
+    }, [sortedPlayers, searchTerm, isSearching]);
 
     const handleSearchChange = (e) => {
         setSearchTerm(e.target.value);
+        setDisplayCount(ITEMS_PER_PAGE);
     };
 
     const clearSearch = () => {
         setSearchTerm('');
-        setDisplayCount(itemsPerPage);
+        setDisplayCount(ITEMS_PER_PAGE);
     };
 
     const handleSort = (column) => {
         if (column !== sortColumn) {
             setSortColumn(column);
-            sortPlayersData(column);
         }
     };
 
-    const sortPlayersData = (column) => {
-        const sortedPlayers = [...filteredPlayers].sort((a, b) => {
-            const valueA = getRatingValue(a[column]);
-            const valueB = getRatingValue(b[column]);
-            return valueB - valueA;
-        });
-
-        setFilteredPlayers(sortedPlayers);
-    };
-
     const handleLoadMore = () => {
-        setDisplayCount(prev => prev + itemsPerPage);
+        setDisplayCount(prev => prev + ITEMS_PER_PAGE);
     };
 
     const handleShowAll = () => {
@@ -106,18 +68,17 @@ const PlayerStats = () => {
     };
 
     const handleShowLess = () => {
-        setDisplayCount(itemsPerPage);
+        setDisplayCount(ITEMS_PER_PAGE);
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    if (isLoading) {
-        return <div className='loading'>loading...<span className='animation'></span></div>;
-    }
+    // Ao pesquisar mostram-se todos os resultados
+    const visibleCount = isSearching ? filteredPlayers.length : displayCount;
+    const displayedPlayers = filteredPlayers.slice(0, visibleCount);
+    const hasMore = visibleCount < filteredPlayers.length;
+    const showingAll = visibleCount >= filteredPlayers.length;
 
-    const displayedPlayers = filteredPlayers.slice(0, displayCount);
-    const hasMore = displayCount < filteredPlayers.length;
-    const showingAll = displayCount >= filteredPlayers.length;
-    const isSearching = searchTerm.trim() !== '';
+    const lastUpdate = new Date(allPlayers.length > 0 ? allPlayers[0].fetchDate : Date.now());
 
     return (
         <div className='container'>
@@ -126,7 +87,7 @@ const PlayerStats = () => {
                 <h1 className="title">Musas FIDE Ratings</h1>
 
                 <p className="subtitle">
-                    Ratings updated monthly by FIDE | Last update: <em>{new Date(playersData.length > 0 ? playersData[0].fetchDate : Date.now()).toLocaleDateString('en-GB', {
+                    Ratings updated monthly by FIDE | Last update: <em>{lastUpdate.toLocaleDateString('en-GB', {
                         day: 'numeric',
                         month: 'long',
                         year: 'numeric'
@@ -175,13 +136,11 @@ const PlayerStats = () => {
                         )}
                     </div>
 
-                    {playersData && (
-                        <div className="total-count">
-                            <span className="badge bg-secondary">
-                                Total: {playersData.length} players
-                            </span>
-                        </div>
-                    )}
+                    <div className="total-count">
+                        <span className="badge bg-secondary">
+                            Total: {allPlayers.length} players
+                        </span>
+                    </div>
                 </div>
             </div>
 
@@ -243,7 +202,7 @@ const PlayerStats = () => {
                                 className="btn btn-primary me-2"
                                 onClick={handleLoadMore}
                             >
-                                Load more {itemsPerPage}
+                                Load more {ITEMS_PER_PAGE}
                             </button>
                             <button
                                 className="btn btn-outline-primary"
@@ -254,7 +213,7 @@ const PlayerStats = () => {
                         </>
                     )}
 
-                    {showingAll && filteredPlayers.length > itemsPerPage && (
+                    {showingAll && filteredPlayers.length > ITEMS_PER_PAGE && (
                         <button
                             className="btn btn-outline-primary"
                             onClick={handleShowLess}
