@@ -2,13 +2,19 @@ import React, { useState, useEffect } from 'react';
 import PlayerRow from './PlayerRow';
 import musasData from '../data/musas-data.json';
 
+// Um jogador é válido se tiver nome e este não for "N/A"
+const isValidPlayer = (player) => {
+    const name = typeof player.name === 'string' ? player.name.trim() : '';
+    return name !== '' && name.toUpperCase() !== 'N/A';
+};
+
 const PlayerStats = () => {
     const [playersData, setPlayersData] = useState(null);
     const [filteredPlayers, setFilteredPlayers] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [sortColumn, setSortColumn] = useState("standard");
     const [displayCount, setDisplayCount] = useState(15);
-    const [itemsPerPage, setItemsPerPage] = useState(15);
+    const [itemsPerPage] = useState(15);
     const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
@@ -23,7 +29,10 @@ const PlayerStats = () => {
 
     const fetchPlayersData = async () => {
         try {
-            const playerArray = Object.entries(musasData).map(([id, player]) => ({ id, ...player }));
+            // Ignora jogadores que a FIDE não encontrou (gravados com o nome "N/A")
+            const playerArray = Object.entries(musasData)
+                .map(([id, player]) => ({ id, ...player }))
+                .filter(player => isValidPlayer(player));
 
             playerArray.sort((a, b) => {
                 const standardA = getRatingValue(a.standard);
@@ -117,7 +126,7 @@ const PlayerStats = () => {
                 <h1 className="title">Musas FIDE Ratings</h1>
 
                 <p className="subtitle">
-                    Ratings updated monthly by FIDE | Last update: <em>{new Date(playersData[0].fetchDate).toLocaleDateString('en-GB', {
+                    Ratings updated monthly by FIDE | Last update: <em>{new Date(playersData.length > 0 ? playersData[0].fetchDate : Date.now()).toLocaleDateString('en-GB', {
                         day: 'numeric',
                         month: 'long',
                         year: 'numeric'

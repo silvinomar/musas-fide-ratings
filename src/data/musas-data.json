@@ -14,31 +14,21 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:49.458Z"
+    "fetchDate": "2026-11-16T12:05:29.776Z"
   },
   "1912160": {
-    "name": "Amaral, Ricardo",
-    "standard": {
-      "rating": 1554,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
-    "rapid": {
-      "rating": 1546,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
+    "name": "N/A",
+    "standard": "Not rated",
+    "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:56.403Z"
+    "fetchDate": "2026-11-16T12:06:02.207Z"
   },
   "1912704": {
     "name": "Sousa, Hugo",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:52.457Z"
+    "fetchDate": "2026-11-16T12:05:43.593Z"
   },
   "1915312": {
     "name": "Chambel De Matos, Luis",
@@ -60,36 +50,21 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:50.165Z"
+    "fetchDate": "2026-11-16T12:05:32.341Z"
   },
   "1920553": {
-    "name": "Carvalho, Nuno Miguel",
-    "standard": {
-      "rating": 1665,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
-    "rapid": {
-      "rating": 1641,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
-    "blitz": {
-      "rating": 1655,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
-    "fetchDate": "2026-06-10T15:07:55.801Z"
+    "name": "N/A",
+    "standard": "Not rated",
+    "rapid": "Not rated",
+    "blitz": "Not rated",
+    "fetchDate": "2026-11-16T12:05:58.520Z"
   },
   "1922629": {
     "name": "Zangger, Ursula",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:53.180Z"
+    "fetchDate": "2026-11-16T12:05:47.111Z"
   },
   "1924893": {
     "name": "Topa, Paulo",
@@ -111,7 +86,7 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:50.808Z"
+    "fetchDate": "2026-11-16T12:05:35.377Z"
   },
   "1928660": {
     "name": "Cunha, Rui Pedro",
@@ -133,28 +108,28 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:49.639Z"
+    "fetchDate": "2026-11-16T12:05:30.282Z"
   },
   "1929801": {
     "name": "Monteiro, Mariana Dos Santos",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:52.113Z"
+    "fetchDate": "2026-11-16T12:05:42.062Z"
   },
   "1935216": {
     "name": "Kurbanov, Eldar",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:51.619Z"
+    "fetchDate": "2026-11-16T12:05:39.542Z"
   },
   "1937839": {
     "name": "Afonso, Rui",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:52.795Z"
+    "fetchDate": "2026-11-16T12:05:45.067Z"
   },
   "1939823": {
     "name": "Borovsky, Igor",
@@ -176,7 +151,7 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:50.390Z"
+    "fetchDate": "2026-11-16T12:05:33.338Z"
   },
   "1947745": {
     "name": "Nogueira, Luis Filipe",
@@ -198,7 +173,7 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:49.821Z"
+    "fetchDate": "2026-11-16T12:05:30.849Z"
   },
   "1960210": {
     "name": "Abdelatiff, Samir",
@@ -210,21 +185,21 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:51.320Z"
+    "fetchDate": "2026-11-16T12:05:38.005Z"
   },
   "1964585": {
     "name": "Pereira, Candido Manuel Ramalho",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:53.078Z"
+    "fetchDate": "2026-11-16T12:05:46.593Z"
   },
   "1965263": {
     "name": "Matos, Jose Francisco",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:53.473Z"
+    "fetchDate": "2026-11-16T12:05:48.650Z"
   },
   "1967495": {
     "name": "Salazar, Luis Antonio Duque",
@@ -241,46 +216,21 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:51.111Z"
+    "fetchDate": "2026-11-16T12:05:36.924Z"
   },
   "1969145": {
-    "name": "Afonso, Rui Goncalo",
-    "standard": {
-      "rating": 1449,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
-    "rapid": {
-      "rating": 1403,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
-    "blitz": {
-      "rating": 1417,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
-    "fetchDate": "2026-06-10T15:07:56.184Z"
+    "name": "N/A",
+    "standard": "Not rated",
+    "rapid": "Not rated",
+    "blitz": "Not rated",
+    "fetchDate": "2026-11-16T12:06:00.978Z"
   },
   "1969161": {
-    "name": "Costa, Joao Bernardo",
-    "standard": {
-      "rating": 1796,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
+    "name": "N/A",
+    "standard": "Not rated",
     "rapid": "Not rated",
-    "blitz": {
-      "rating": 1680,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
-    "fetchDate": "2026-06-10T15:07:55.411Z"
+    "blitz": "Not rated",
+    "fetchDate": "2026-11-16T12:05:56.063Z"
   },
   "1969323": {
     "name": "Figueiredo, Luis",
@@ -297,7 +247,7 @@
       "first": false
     },
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:50.606Z"
+    "fetchDate": "2026-11-16T12:05:34.352Z"
   },
   "1971891": {
     "name": "Almeida, Silvino",
@@ -319,7 +269,7 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:49.930Z"
+    "fetchDate": "2026-11-16T12:05:31.362Z"
   },
   "1972332": {
     "name": "Silva, Guilherme Jose Teixeira",
@@ -331,14 +281,14 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:51.417Z"
+    "fetchDate": "2026-11-16T12:05:38.506Z"
   },
   "1976494": {
     "name": "Martins, Rui Andre",
     "standard": {
       "rating": 1572,
-      "change": "up",
-      "diff": 20,
+      "change": "same",
+      "diff": 0,
       "first": false
     },
     "rapid": {
@@ -348,7 +298,7 @@
       "first": false
     },
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:50.041Z"
+    "fetchDate": "2026-11-16T12:05:31.853Z"
   },
   "1976508": {
     "name": "Ribeiro, Diogo Lousa",
@@ -370,7 +320,7 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:48.247Z"
+    "fetchDate": "2026-11-16T12:05:27.839Z"
   },
   "1976613": {
     "name": "Baptista, Tiago Miranda Pires",
@@ -387,7 +337,7 @@
       "first": false
     },
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:50.696Z"
+    "fetchDate": "2026-11-16T12:05:34.847Z"
   },
   "1976648": {
     "name": "Dorokhov, Yurii",
@@ -404,7 +354,7 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:51.719Z"
+    "fetchDate": "2026-11-16T12:05:40.051Z"
   },
   "1976656": {
     "name": "Ekberg Dias, Vicente",
@@ -421,14 +371,14 @@
       "first": false
     },
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:50.282Z"
+    "fetchDate": "2026-11-16T12:05:32.835Z"
   },
   "1976672": {
     "name": "Henriques, Roberto",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:52.015Z"
+    "fetchDate": "2026-11-16T12:05:41.549Z"
   },
   "1976680": {
     "name": "Lourenco, Antonio",
@@ -440,35 +390,35 @@
     },
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:52.982Z"
+    "fetchDate": "2026-11-16T12:05:46.064Z"
   },
   "1976699": {
     "name": "Umanets, Snizhana",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:52.594Z"
+    "fetchDate": "2026-11-16T12:05:44.097Z"
   },
   "1979248": {
     "name": "Barnes, David",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:52.890Z"
+    "fetchDate": "2026-11-16T12:05:45.544Z"
   },
   "1979280": {
     "name": "Simoes, Miguel Nobrega",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:52.222Z"
+    "fetchDate": "2026-11-16T12:05:42.574Z"
   },
   "1979833": {
     "name": "Agnelo, Joao",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:51.810Z"
+    "fetchDate": "2026-11-16T12:05:40.546Z"
   },
   "1980378": {
     "name": "Carlos, Gabriel",
@@ -490,7 +440,7 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:50.905Z"
+    "fetchDate": "2026-11-16T12:05:35.889Z"
   },
   "1980521": {
     "name": "Lima, Miguel Alexandre",
@@ -502,14 +452,14 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:51.514Z"
+    "fetchDate": "2026-11-16T12:05:39.021Z"
   },
   "1980599": {
-    "name": "Rocha, Samuel Matinero",
+    "name": "N/A",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:55.893Z"
+    "fetchDate": "2026-11-16T12:05:59.135Z"
   },
   "1980645": {
     "name": "Forero Valencia, Simon Enrique",
@@ -521,7 +471,7 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:53.282Z"
+    "fetchDate": "2026-11-16T12:05:47.626Z"
   },
   "1980661": {
     "name": "Soares, Jean Dyego Gomes",
@@ -538,7 +488,7 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:52.349Z"
+    "fetchDate": "2026-11-16T12:05:43.083Z"
   },
   "1983148": {
     "name": "Martins, Joao Peixoto",
@@ -560,7 +510,7 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:51.017Z"
+    "fetchDate": "2026-11-16T12:05:36.412Z"
   },
   "1983377": {
     "name": "Vale, Nuno",
@@ -572,7 +522,7 @@
       "first": false
     },
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:51.214Z"
+    "fetchDate": "2026-11-16T12:05:37.493Z"
   },
   "1983733": {
     "name": "Iatsenko, Petr",
@@ -584,19 +534,14 @@
     },
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:53.378Z"
+    "fetchDate": "2026-11-16T12:05:48.136Z"
   },
   "1986929": {
-    "name": "Ferreira, Francisco",
+    "name": "N/A",
     "standard": "Not rated",
-    "rapid": {
-      "rating": 1568,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
+    "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:56.292Z"
+    "fetchDate": "2026-11-16T12:06:01.594Z"
   },
   "1986945": {
     "name": "Pedrosa, Pedro",
@@ -618,29 +563,29 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:53.865Z"
+    "fetchDate": "2026-11-16T12:05:50.640Z"
   },
   "1987283": {
     "name": "Kolyvanov, Klim",
     "standard": {
-      "rating": 1712,
+      "rating": 1715,
       "change": "same",
       "diff": 0,
       "first": false
     },
     "rapid": {
-      "rating": 1624,
+      "rating": 1658,
       "change": "same",
       "diff": 0,
       "first": false
     },
     "blitz": {
-      "rating": 1663,
-      "change": "up",
-      "diff": 11,
+      "rating": 1650,
+      "change": "same",
+      "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:54.658Z"
+    "fetchDate": "2026-11-16T12:05:52.699Z"
   },
   "1987763": {
     "name": "Kolotaev, Fedor",
@@ -650,14 +595,19 @@
       "diff": 0,
       "first": false
     },
-    "rapid": "Not rated",
+    "rapid": {
+      "rating": 1678,
+      "change": "same",
+      "diff": 0,
+      "first": false
+    },
     "blitz": {
       "rating": 1634,
       "change": "same",
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:54.053Z"
+    "fetchDate": "2026-11-16T12:05:51.692Z"
   },
   "1987810": {
     "name": "Silva, Catarina",
@@ -669,202 +619,180 @@
       "first": false
     },
     "blitz": {
-      "rating": 1812,
-      "change": "down",
-      "diff": -1,
+      "rating": 1775,
+      "change": "same",
+      "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:54.763Z"
+    "fetchDate": "2026-11-16T12:05:53.182Z"
   },
   "1988786": {
-    "name": "Brochado, Ines Sordo",
-    "standard": {
-      "rating": 1694,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
-    "rapid": {
-      "rating": 1735,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
-    "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:55.988Z"
-  },
-  "1988794": {
-    "name": "Eledin, Boris",
-    "standard": {
-      "rating": 1718,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
-    "rapid": {
-      "rating": 1706,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
-    "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:55.521Z"
-  },
-  "1988816": {
-    "name": "Hankovich, Yauhen",
+    "name": "N/A",
     "standard": "Not rated",
-    "rapid": {
-      "rating": 1632,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
-    "blitz": {
-      "rating": 1669,
-      "change": null,
-      "diff": 0,
-      "first": true
-    },
-    "fetchDate": "2026-06-10T15:07:55.705Z"
-  },
-  "1988824": {
-    "name": "Mata, Simao",
-    "standard": {
-      "rating": 1573,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:56.082Z"
+    "fetchDate": "2026-11-16T12:05:59.748Z"
+  },
+  "1988794": {
+    "name": "N/A",
+    "standard": "Not rated",
+    "rapid": "Not rated",
+    "blitz": "Not rated",
+    "fetchDate": "2026-11-16T12:05:56.678Z"
+  },
+  "1988816": {
+    "name": "N/A",
+    "standard": "Not rated",
+    "rapid": "Not rated",
+    "blitz": "Not rated",
+    "fetchDate": "2026-11-16T12:05:57.906Z"
+  },
+  "1988824": {
+    "name": "N/A",
+    "standard": "Not rated",
+    "rapid": "Not rated",
+    "blitz": "Not rated",
+    "fetchDate": "2026-11-16T12:06:00.364Z"
   },
   "1989146": {
     "name": "Silva, Joao Leonardo",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:56.693Z"
+    "fetchDate": "2026-11-16T12:06:04.102Z"
   },
   "1989979": {
     "name": "Nikonov, Matvey",
     "standard": "Not rated",
     "rapid": {
-      "rating": 1404,
-      "change": "same",
-      "diff": 0,
+      "rating": 1610,
+      "change": "up",
+      "diff": 206,
       "first": false
     },
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:56.504Z"
+    "fetchDate": "2026-11-16T12:06:02.961Z"
   },
   "1990160": {
-    "name": "Argiles, Felipe",
+    "name": "N/A",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:55.618Z"
+    "fetchDate": "2026-11-16T12:05:57.233Z"
   },
   "1990179": {
     "name": "D`orey, Andre",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:56.601Z"
+    "fetchDate": "2026-11-16T12:06:03.607Z"
   },
   "1991310": {
-    "name": "Piza, Guilherme",
+    "name": "N/A",
     "standard": "Not rated",
-    "rapid": {
-      "rating": 1781,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
+    "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:55.324Z"
+    "fetchDate": "2026-11-16T12:05:55.457Z"
   },
   "1991540": {
-    "name": "Kalustian, Martin",
+    "name": "N/A",
     "standard": "Not rated",
-    "rapid": {
-      "rating": 1412,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
+    "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:54.853Z"
+    "fetchDate": "2026-11-16T12:05:53.662Z"
   },
   "1991582": {
-    "name": "Nascimento, Guttemberg",
+    "name": "N/A",
     "standard": "Not rated",
-    "rapid": {
-      "rating": 1623,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
+    "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:54.949Z"
+    "fetchDate": "2026-11-16T12:05:54.116Z"
   },
   "1991590": {
-    "name": "Nunes, Francisco",
+    "name": "N/A",
     "standard": "Not rated",
-    "rapid": {
-      "rating": 1656,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
-    "blitz": {
-      "rating": 1611,
-      "change": null,
-      "diff": 0,
-      "first": true
-    },
-    "fetchDate": "2026-06-10T15:07:55.043Z"
+    "rapid": "Not rated",
+    "blitz": "Not rated",
+    "fetchDate": "2026-11-16T12:05:54.571Z"
   },
   "1991604": {
-    "name": "Pimenta, Gustavo Coelho",
+    "name": "N/A",
     "standard": "Not rated",
-    "rapid": {
-      "rating": 1626,
-      "change": "same",
-      "diff": 0,
-      "first": false
-    },
+    "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:55.140Z"
+    "fetchDate": "2026-11-16T12:05:55.013Z"
   },
   "1993160": {
     "name": "Almeida, Martim Reis",
     "standard": "Not rated",
     "rapid": {
-      "rating": 1580,
-      "change": "same",
-      "diff": 0,
+      "rating": 1538,
+      "change": "down",
+      "diff": -42,
       "first": false
     },
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:56.795Z"
+    "fetchDate": "2026-11-16T12:06:04.614Z"
   },
   "1994328": {
     "name": "Rosa, Pedro Faria",
     "standard": "Not rated",
-    "rapid": {
-      "rating": 1431,
-      "change": "down",
-      "diff": -11,
+    "rapid": "Not rated",
+    "blitz": {
+      "rating": 1423,
+      "change": "same",
+      "diff": 0,
       "first": false
     },
+    "fetchDate": "2026-11-16T12:06:05.142Z"
+  },
+  "1996380": {
+    "name": "Braz, Patricia",
+    "standard": "Not rated",
+    "rapid": {
+      "rating": 1561,
+      "change": null,
+      "diff": 0,
+      "first": true
+    },
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:56.889Z"
+    "fetchDate": "2026-11-16T12:06:05.649Z"
+  },
+  "1996398": {
+    "name": "Correia, Mara",
+    "standard": "Not rated",
+    "rapid": {
+      "rating": 1599,
+      "change": null,
+      "diff": 0,
+      "first": true
+    },
+    "blitz": "Not rated",
+    "fetchDate": "2026-11-16T12:06:06.144Z"
+  },
+  "1996495": {
+    "name": "Peixoto, Rui",
+    "standard": "Not rated",
+    "rapid": "Not rated",
+    "blitz": "Not rated",
+    "fetchDate": "2026-11-16T12:06:07.176Z"
+  },
+  "1996525": {
+    "name": "Resende, Rodrigo",
+    "standard": "Not rated",
+    "rapid": {
+      "rating": 1604,
+      "change": null,
+      "diff": 0,
+      "first": true
+    },
+    "blitz": "Not rated",
+    "fetchDate": "2026-11-16T12:06:07.702Z"
   },
   "14173328": {
     "name": "Afendyk, Glib",
     "standard": {
-      "rating": 1814,
+      "rating": 1807,
       "change": "same",
       "diff": 0,
       "first": false
@@ -881,7 +809,7 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:48.386Z"
+    "fetchDate": "2026-11-16T12:05:28.546Z"
   },
   "14800373": {
     "name": "Hayssan Abdul Arnaldo Afu",
@@ -892,9 +820,9 @@
       "first": false
     },
     "rapid": {
-      "rating": 1698,
-      "change": "same",
-      "diff": 0,
+      "rating": 1701,
+      "change": "up",
+      "diff": 3,
       "first": false
     },
     "blitz": {
@@ -903,12 +831,12 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:54.548Z"
+    "fetchDate": "2026-11-16T12:05:52.201Z"
   },
   "14802848": {
     "name": "Nombora, William dos Santos",
     "standard": {
-      "rating": 1699,
+      "rating": 1696,
       "change": "same",
       "diff": 0,
       "first": false
@@ -920,7 +848,14 @@
       "first": false
     },
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:53.964Z"
+    "fetchDate": "2026-11-16T12:05:51.176Z"
+  },
+  "19964110": {
+    "name": "N/A",
+    "standard": "Not rated",
+    "rapid": "Not rated",
+    "blitz": "Not rated",
+    "fetchDate": "2026-11-16T12:06:06.600Z"
   },
   "24151327": {
     "name": "Podymov, Andrei",
@@ -937,7 +872,7 @@
       "first": false
     },
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:49.340Z"
+    "fetchDate": "2026-11-16T12:05:29.252Z"
   },
   "34173153": {
     "name": "Snizhynska, Maryna",
@@ -959,35 +894,40 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:50.495Z"
+    "fetchDate": "2026-11-16T12:05:33.839Z"
   },
   "34184740": {
     "name": "Pekar, Sara",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:53.571Z"
+    "fetchDate": "2026-11-16T12:05:49.142Z"
   },
   "34184759": {
     "name": "Vasilenko, Dmytro",
     "standard": "Not rated",
     "rapid": "Not rated",
-    "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:53.773Z"
+    "blitz": {
+      "rating": 1402,
+      "change": "same",
+      "diff": 0,
+      "first": false
+    },
+    "fetchDate": "2026-11-16T12:05:50.138Z"
   },
   "34184767": {
     "name": "Vasilenko, Oleg",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:53.672Z"
+    "fetchDate": "2026-11-16T12:05:49.635Z"
   },
   "34197885": {
     "name": "Ganichev, Mykola",
     "standard": "Not rated",
     "rapid": "Not rated",
     "blitz": "Not rated",
-    "fetchDate": "2026-06-10T15:07:51.911Z"
+    "fetchDate": "2026-11-16T12:05:41.023Z"
   },
   "34198261": {
     "name": "Vikhrov, Dmytro",
@@ -999,6 +939,6 @@
       "diff": 0,
       "first": false
     },
-    "fetchDate": "2026-06-10T15:07:52.705Z"
+    "fetchDate": "2026-11-16T12:05:44.595Z"
   }
 }
